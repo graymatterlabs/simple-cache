@@ -1,0 +1,46 @@
+{
+    "name": "graymatterlabs/simple-cache",
+    "description": "PSR-16 implementations",
+    "keywords": [
+        "graymatterlabs",
+        "psr/simple-cache",
+        "simple-cache",
+        "psr16"
+    ],
+    "homepage": "https://github.com/graymatterlabs/simple-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan Colson",
+            "email": "ryan@graymatterlabs.co"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "psr/simple-cache": "^3.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.9",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GrayMatterLabs\\SimpleCache\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GrayMatterLabs\\SimpleCache\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-text",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
