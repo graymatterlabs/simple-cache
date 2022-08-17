@@ -11,7 +11,7 @@ Runtime implementations that satisfy the PSR-16 specification. Currently support
 You can install the package via composer:
 
 ```bash
-composer require graymatterlabs/simple-cache:^1.0
+composer require graymatterlabs/simple-cache:^1.1
 ```
 
 ## Usage
