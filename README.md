@@ -4,7 +4,7 @@
 [![Tests](https://github.com/graymatterlabs/simple-cache/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/graymatterlabs/simple-cache/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/graymatterlabs/simple-cache.svg?style=flat-square)](https://packagist.org/packages/graymatterlabs/simple-cache)
 
-Runtime (array and "null-object") implementations that satisfy the PSR-16 specification.
+Runtime implementations that satisfy the PSR-16 specification. Currently supported are array, "null-object", and cookie-based implementations.
 
 ## Installation
 
@@ -17,7 +17,7 @@ composer require graymatterlabs/simple-cache:^1.0
 ## Usage
 
 ```php
-$cache = new ArrayCache();
+$cache = new ArrayCache(); // new CookieCache('cookie-name');
 
 $cache->set($key, $value, $ttl); // bool
 $cache->setMultiple($values, $ttl); // bool
