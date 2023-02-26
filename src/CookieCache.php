@@ -10,7 +10,7 @@ class CookieCache extends ArrayCache
 {
     public function __construct(protected string $cookie)
     {
-        $this->cache = @json_decode($_COOKIE[$this->cookie] ?? '[]', true) ?? [];
+        $this->cache = json_decode($_COOKIE[$this->cookie] ?? '[]', true) ?: [];
     }
 
     public function delete(string $key): bool
