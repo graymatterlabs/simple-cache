@@ -28,8 +28,6 @@ class RedisCache implements CacheInterface
 
     public function set(string $key, mixed $value, DateInterval|int|null $ttl = null): bool
     {
-        $value = serialize($value);
-
         if ($ttl instanceof DateInterval) {
             $ttl = (new DateTime())->add($ttl)->getTimestamp();
         }
