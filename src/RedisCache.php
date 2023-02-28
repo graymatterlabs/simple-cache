@@ -23,11 +23,13 @@ class RedisCache implements CacheInterface
             return $default;
         }
 
-        return $value;
+        return @unserialize($value, ['allowed_classes' => true]);
     }
 
     public function set(string $key, mixed $value, DateInterval|int|null $ttl = null): bool
     {
+        $value = serialize($value);
+
         if ($ttl instanceof DateInterval) {
             $ttl = (new DateTime())->add($ttl)->getTimestamp();
         }
